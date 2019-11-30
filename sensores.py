@@ -53,7 +53,7 @@ class Sensores:
                 t=read_temp(S3)
         return t
 
-        '
+        
 
         
 
