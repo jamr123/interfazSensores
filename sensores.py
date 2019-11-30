@@ -4,9 +4,7 @@ import time
 
 
 class Sensores:
-    S1=None
-    S2=None
-    S3=None
+    
     
 
     def __init__(self):
@@ -40,17 +38,17 @@ class Sensores:
         if n==1:
             if glob.glob('/sys/bus/w1/devices/28*')[0]:
                 carpetaS1 = glob.glob('/sys/bus/w1/devices/28*')[0]
-                self.S1 = carpetaS1 + '/w1_slave'
+                S1 = carpetaS1 + '/w1_slave'
                 t=read_temp(S1)
         elif n==2:
             if glob.glob('/sys/bus/w1/devices/28*')[1]:
                 carpetaS2 = glob.glob('/sys/bus/w1/devices/28*')[1]
-                self.S2 = carpetaS2 + '/w1_slave'
+                S2 = carpetaS2 + '/w1_slave'
                 t=read_temp(S2)
         elif n==3:
             if glob.glob('/sys/bus/w1/devices/28*')[2]:
                 carpetaS3 = glob.glob('/sys/bus/w1/devices/28*')[2]
-                self.S3 = carpetaS3 + '/w1_slave'
+                S3 = carpetaS3 + '/w1_slave'
                 t=read_temp(S3)
         return t
 
