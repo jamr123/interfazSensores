@@ -51,8 +51,8 @@ class Interfaz:
         i=0
         while i<10:
             time.sleep(1)
-            eS1.delete(0,END)
-            eS1.insert(0,str(i))
+            self.eS1.delete(0,END)
+            self.eS1.insert(0,str(i))
             i=i+1
     def countCS2(self):
         i=0
@@ -90,41 +90,41 @@ class Interfaz:
 
     def entradas(self,V):
 
-        eS1 = Entry(V, width=10)
-        eS1 .grid(row=0, column=1, padx=5, pady=5)
-        eS1 .config(justify="right", state='readonly')
+        self.eS1 = Entry(V, width=10)
+        self.eS1 .grid(row=0, column=1, padx=5, pady=5)
+        self.eS1 .config(justify="right", state='readonly')
          
-        eS2 = Entry(V, width=10)
-        eS2 .grid(row=1, column=1, padx=5, pady=5)
-        eS2 .config(justify="right", state='readonly')
+        self.eS2 = Entry(V, width=10)
+        self.eS2 .grid(row=1, column=1, padx=5, pady=5)
+        self.eS2 .config(justify="right", state='readonly')
          
-        eS3 = Entry(V, width=10)
-        eS3 .grid(row=2, column=1, padx=5, pady=5)
-        eS3 .config(justify="right", state='readonly')
+        self.eS3 = Entry(V, width=10)
+        self.eS3 .grid(row=2, column=1, padx=5, pady=5)
+        self.eS3 .config(justify="right", state='readonly')
 
-        eSC1 = Entry(V, width=8)
-        eSC1 .grid(row=0, column=3, padx=5, pady=5)
-        eSC1 .config(justify="right", state='readonly')
+        self.eSC1 = Entry(V, width=8)
+        self.eSC1 .grid(row=0, column=3, padx=5, pady=5)
+        self.eSC1 .config(justify="right", state='readonly')
          
-        eSC2 = Entry(V, width=8)
-        eSC2 .grid(row=1, column=3, padx=5, pady=5)
-        eSC2 .config(justify="right", state='readonly')
+        self.eSC2 = Entry(V, width=8)
+        self.eSC2 .grid(row=1, column=3, padx=5, pady=5)
+        self.eSC2 .config(justify="right", state='readonly')
          
-        eSC3 = Entry(V, width=8)
-        eSC3 .grid(row=2, column=3, padx=5, pady=5)
-        eSC3 .config(justify="right", state='readonly')
+        self.eSC3 = Entry(V, width=8)
+        self.eSC3 .grid(row=2, column=3, padx=5, pady=5)
+        self.eSC3 .config(justify="right", state='readonly')
 
-        eSD1 = Entry(V, width=8)
-        eSD1 .grid(row=0, column=5, padx=5, pady=5)
-        eSD1 .config(justify="right", state='readonly')
+        self.eSD1 = Entry(V, width=8)
+        self.eSD1 .grid(row=0, column=5, padx=5, pady=5)
+        self.eSD1 .config(justify="right", state='readonly')
          
-        eSD2 = Entry(V, width=8)
-        eSD2 .grid(row=1, column=5, padx=5, pady=5)
-        eSD2 .config(justify="right", state='readonly')
+        self.eSD2 = Entry(V, width=8)
+        self.eSD2 .grid(row=1, column=5, padx=5, pady=5)
+        self.eSD2 .config(justify="right", state='readonly')
          
-        eSD3 = Entry(V, width=8)
-        eSD3 .grid(row=2, column=5, padx=5, pady=5)
-        eSD3 .config(justify="right", state='readonly')
+        self.eSD3 = Entry(V, width=8)
+        self.eSD3 .grid(row=2, column=5, padx=5, pady=5)
+        self.eSD3 .config(justify="right", state='readonly')
 
               
     def labels(self,V):
