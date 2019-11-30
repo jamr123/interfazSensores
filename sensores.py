@@ -43,7 +43,7 @@ class Sensores:
         while lines[0].strip()[-3:] != 'YES':
             time.sleep(0.2)
             lines = self.read_temp_raw(device_file)
-            if lines[0].strip()[-2:] != 'NO':
+            if lines[0].strip()[-2:] == 'NO':
                 break
         equals_pos = lines[1].find('t=')
         if equals_pos != -1:
