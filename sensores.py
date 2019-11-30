@@ -12,12 +12,22 @@ class Sensores:
     def __init__(self):
         os.system('modprobe w1-gpio')
         os.system('modprobe w1-therm')
-        if glob.glob('/sys/bus/w1/devices/28*')[1] in glob.glob('/sys/bus/w1/devices/28*'):
-           self.SN1=glob.glob('/sys/bus/w1/devices/28*')[1]
-        if glob.glob('/sys/bus/w1/devices/28*')[2] in glob.glob('/sys/bus/w1/devices/28*'):
-           self.SN2=glob.glob('/sys/bus/w1/devices/28*')[2]
-        if glob.glob('/sys/bus/w1/devices/28*')[3] in glob.glob('/sys/bus/w1/devices/28*'):
-           self.SN3=glob.glob('/sys/bus/w1/devices/28*')[3] 
+
+        listaSensores=glob.glob('/sys/bus/w1/devices/28*')
+        if len(listaSensores)>0:
+           self.SN1=glob.glob('/sys/bus/w1/devices/28*')[0]
+        else:
+            self.SN1=None
+
+        if len(listaSensores)>1:
+           self.SN2=glob.glob('/sys/bus/w1/devices/28*')[1]
+        else:
+            self.SN2=None
+
+        if len(listaSensores)>2:
+           self.SN3=glob.glob('/sys/bus/w1/devices/28*')[2]
+        else:
+            self.SN3=None 
 
         
         
