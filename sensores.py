@@ -27,7 +27,7 @@ class Sensores:
         f = open(device_file, 'r')
         lines = f.readlines()
         f.close()
-    return lines
+        return lines
  
     def read_temp(device_file):
         lines = read_temp_raw(device_file)
