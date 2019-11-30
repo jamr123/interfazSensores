@@ -14,9 +14,9 @@ class Sensores:
         os.system('modprobe w1-therm')
         if glob.glob('/sys/bus/w1/devices/28*')[1]:
            self.SN1=glob.glob('/sys/bus/w1/devices/28*')[1]
-        if glob.glob('/sys/bus/w1/devices/28*')[2]
+        if glob.glob('/sys/bus/w1/devices/28*')[2]:
            self.SN2=glob.glob('/sys/bus/w1/devices/28*')[2]
-        if glob.glob('/sys/bus/w1/devices/28*')[1]
+        if glob.glob('/sys/bus/w1/devices/28*')[3]:
            self.SN3=glob.glob('/sys/bus/w1/devices/28*')[3] 
 
         
