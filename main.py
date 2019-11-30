@@ -6,7 +6,8 @@ sensores=sensores.Sensores()
 
 
 
-while true:
+
+
 
 
 
