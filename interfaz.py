@@ -13,17 +13,17 @@ class Interfaz:
         self.botones(V)
         V.mainloop()
 
-    def CS1():
+    def CS1(self):
         print("CS1")
-    def CS2():
+    def CS2(self):
         print("CS2")
-    def CS3():
+    def CS3(self):
         print("CS3") 
-    def DS1():
+    def DS1(self):
         print("DS1")
-    def DS2():
+    def DS2(self):
         print("DS2")
-    def DS3():
+    def DS3(self):
         print("DS3")   
 
     def entradas(self,V):
