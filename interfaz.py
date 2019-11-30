@@ -3,7 +3,15 @@ import threading
 import time 
 
 class Interfaz:
-   
+    eS1=None
+    eS2=None
+    eS3=None
+    eCS1=None
+    eCS2=None
+    eCS3=None
+    eDS1=None
+    eDS2=None
+    eDS3=None
 
     def __init__(self):
         V = Tk()
@@ -42,37 +50,38 @@ class Interfaz:
     def countCS1(self):
         i=0
         while i<10:
-            time.sleep(2)
-            print(i)
+            time.sleep(1)
+            eS1.delete(0,END)
+            eS1.insert(0,str(i))
             i=i+1
     def countCS2(self):
         i=0
         while i<10:
-            time.sleep(2)
+            time.sleep(1)
             print(i)
             i=i+1
     def countCS3(self):
         i=0
         while i<10:
-            time.sleep(2)
+            time.sleep(1)
             print(i)
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
-            time.sleep(2)
+            time.sleep(1)
             print(i)
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
-            time.sleep(2)
+            time.sleep(1)
             print(i)
             i=i+1
     def countDS3(self):
         i=0
         while i<10:
-            time.sleep(2)
+            time.sleep(1)
             print(i)
             i=i+1
     
