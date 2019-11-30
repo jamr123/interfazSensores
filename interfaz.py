@@ -13,6 +13,19 @@ class Interfaz:
         self.botones(V)
         V.mainloop()
 
+    def CS1():
+        print("CS1")
+    def CS2():
+        print("CS2")
+    def CS3():
+        print("CS3") 
+    def DS1():
+        print("DS1")
+    def DS2():
+        print("DS2")
+    def DS3():
+        print("DS3")   
+
     def entradas(self,V):
 
         eS1 = Entry(V, width=10)
@@ -51,9 +64,7 @@ class Interfaz:
         eSD3 .grid(row=2, column=5, padx=5, pady=5)
         eSD3 .config(justify="right", state='readonly')
 
-        
-        
-        
+              
     def labels(self,V):
         label = Label(V, text="S1")
         label.grid(row=0, column=0, sticky="w", padx=5, pady=5)
@@ -65,22 +76,22 @@ class Interfaz:
         label.grid(row=2, column=0, sticky="w", padx=5, pady=5)
     
     def botones(self,V):
-        b1=Button(V, text="CS1")
+        b1=Button(V, text="CS1",command=self.CS1)
         b1.grid(row=0, column=2, padx=5, pady=5)
 
-        b2=Button(V, text="CS2")
+        b2=Button(V, text="CS2",command=self.CS2)
         b2.grid(row=1, column=2, padx=5, pady=5)
 
-        b3=Button(V, text="CS3")
+        b3=Button(V, text="CS3",command=self.CS3)
         b3.grid(row=2, column=2, padx=5, pady=5)
 
-        b1=Button(V, text="DS1")
+        b1=Button(V, text="DS1",command=self.DS1)
         b1.grid(row=0, column=4, padx=5, pady=5)
 
-        b2=Button(V, text="DS2")
+        b2=Button(V, text="DS2",command=self.DS2)
         b2.grid(row=1, column=4, padx=5, pady=5)
 
-        b3=Button(V, text="DS3")
+        b3=Button(V, text="DS3",command=self.DS3)
         b3.grid(row=2, column=4, padx=5, pady=5)
 
     
