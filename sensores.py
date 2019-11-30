@@ -14,14 +14,7 @@ class Sensores:
         
         rootSensores = '/sys/bus/w1/devices/'
 
-        carpetaS1 = glob.glob(rootSensores + '28*')[0]
-        self.S1 = carpetaS1 + '/w1_slave'
-
-        carpetaS2 = glob.glob(rootSensores + '28*')[1]
-        self.S2 = carpetaS2 + '/w1_slave'
-
-        carpetaS3 = glob.glob(rootSensores + '28*')[2]
-        self.S3 = carpetaS3 + '/w1_slave'
+        
         
     def read_temp_raw(device_file):
         f = open(device_file, 'r')
@@ -44,14 +37,27 @@ class Sensores:
     def readT(n):
         t=0
         if n==1:
-            t=read_temp(S1)
+            if glob.glob(rootSensores + '28*')[0]:
+                carpetaS1 = glob.glob(rootSensores + '28*')[0]
+                self.S1 = carpetaS1 + '/w1_slave
+                t=read_temp(S1)
         elif n==2:
-            t=read_temp(S2)
+            if glob.glob(rootSensores + '28*')[1]:
+                carpetaS2 = glob.glob(rootSensores + '28*')[1]
+                self.S2 = carpetaS2 + '/w1_slave'
+                t=read_temp(S2)
         elif n==3:
-            t=read_temp(S3)
+            if glob.glob(rootSensores + '28*')[2]:
+                carpetaS3 = glob.glob(rootSensores + '28*')[2]
+                self.S3 = carpetaS3 + '/w1_slave'
+                t=read_temp(S3)
         return t
 
+        '
 
+        
+
+        
 
 
 
