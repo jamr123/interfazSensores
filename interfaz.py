@@ -34,10 +34,10 @@ class Interfaz:
         
     def labels(self,V):
         label = Label(V, text="S1")
-        label.grid(row=0, column=1, sticky="w", padx=5, pady=5)
+        label.grid(row=0, column=0, sticky="w", padx=5, pady=5)
 
         label = Label(V, text="S2")
-        label.grid(row=0, column=2, sticky="w", padx=5, pady=5)
+        label.grid(row=1, column=0, sticky="w", padx=5, pady=5)
 
         label = Label(V, text="S3")
-        label.grid(row=0, column=3, sticky="w", padx=5, pady=5)
+        label.grid(row=2, column=0, sticky="w", padx=5, pady=5)
