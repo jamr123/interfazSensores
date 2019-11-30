@@ -52,20 +52,18 @@ class Sensores:
     def readT(self,n):
         t=None
         
-        if path.exists(self.SN1):
-            if n==1:
-                S1 = self.SN1 + '/w1_slave'
-                t=self.read_temp(S1)
-                
-        if path.exists(self.SN2):
-            if n==1:
-                S2 = self.SN2 + '/w1_slave'
-                t=self.read_temp(S2)
+        if n==1:
+            S1 = self.SN1 + '/w1_slave'
+            t=self.read_temp(S1)
+    
+    
+        elif n==2:
+            S2 = self.SN2 + '/w1_slave'
+            t=self.read_temp(S2)
 
-        if path.exists(self.SN3):
-            if n==1:
-                S3 = self.SN3 + '/w1_slave'
-                t=self.read_temp(S3)
+        elif n==3:
+            S3 = self.SN3 + '/w1_slave'
+            t=self.read_temp(S3)
             
         return t
 
