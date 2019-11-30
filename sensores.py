@@ -47,9 +47,7 @@ class Sensores:
         if n==1:
             S1 = self.SN1 + '/w1_slave'
             t=self.read_temp(S1)
-        elif n==2:
-           
-        elif n==3:
+        
             
         return t
 
