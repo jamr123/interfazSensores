@@ -4,13 +4,29 @@ import time
 
 class Interfaz:
     esc1t = None
+    esc2t = None
+    esc3t = None
+    esd1t = None
+    esd2t = None
+    esd3t = None
+    es1t = None
+    es2t = None
+    es3t = None
 
     def __init__(self):
         V = Tk()
         V.geometry('500x300')
         V.configure(bg = 'beige')
         V.title('Sensores')
+        self.es1t = StringVar()
+        self.es2t = StringVar()
+        self.es3t = StringVar()
         self.esc1t = StringVar()
+        self.esc2t = StringVar()
+        self.esc3t = StringVar()
+        self.esd1t = StringVar()
+        self.esd2t = StringVar()
+        self.esd3t = StringVar()
         self.entradas(V)
         self.labels(V)
         self.botones(V)
@@ -50,31 +66,31 @@ class Interfaz:
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esc2t.set(str(i))
             i=i+1
     def countCS3(self):
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esc3t.set(str(i))
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esd1t.set(str(i))
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esd2t.set(str(i))
             i=i+1
     def countDS3(self):
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esd3t.set(str(i))
             i=i+1
     
 
