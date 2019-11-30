@@ -94,7 +94,7 @@ class Interfaz:
         eS3 .grid(row=2, column=1, padx=5, pady=5)
         eS3 .config(justify="right", state='readonly')
 
-        eSC1 = Entry(V, width=8,textvariable=esc1t)
+        eSC1 = Entry(V, width=8,textvariable=self.esc1t)
         eSC1 .grid(row=0, column=3, padx=5, pady=5)
         eSC1 .config(justify="right", state='readonly')
          
