@@ -51,8 +51,8 @@ class Interfaz:
         i=0
         while i<10:
             time.sleep(1)
-            self.eS1.delete(0,END)
-            self.eS1.insert(0,str(i))
+            self.eCS1.delete(0,END)
+            self.eCS1.insert(0,str(i))
             i=i+1
     def countCS2(self):
         i=0
