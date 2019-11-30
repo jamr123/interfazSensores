@@ -49,3 +49,4 @@ class Interfaz:
         b3.grid(row=2, column=2, padx=5, pady=5)
 
     def counters(self,V):
+        print("")
