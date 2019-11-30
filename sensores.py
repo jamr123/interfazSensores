@@ -23,9 +23,9 @@ class Sensores:
  
     def read_temp(self,device_file):
         lines = self.read_temp_raw(device_file)
-        if lines[0].strip()[-3:] != 'YES':
+        while lines[0].strip()[-3:] != 'YES':
             time.sleep(0.2)
-            lines = self.read_temp_raw()
+            lines = self.read_temp_raw(device_file)
         equals_pos = lines[1].find('t=')
         if equals_pos != -1:
             temp_string = lines[1][equals_pos+2:]
