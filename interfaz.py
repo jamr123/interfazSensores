@@ -58,41 +58,47 @@ class Interfaz:
 
     def countCS1(self):
         i=0
-        while i<10:
-            time.sleep(1)
+        while i<20000:
+            time.sleep(0.001)
             self.esc1t.set(str(i))
             i=i+1
+        self.esc1t.set(str(0))
     def countCS2(self):
         i=0
-        while i<10:
-            time.sleep(1)
+        while i<20000:
+            time.sleep(0.001)
             self.esc2t.set(str(i))
             i=i+1
+        self.esc2t.set(str(0))
     def countCS3(self):
         i=0
-        while i<10:
-            time.sleep(1)
+        while i<20000:
+            time.sleep(0.001)
             self.esc3t.set(str(i))
             i=i+1
+        self.esc3t.set(str(0))
 
     def countDS1(self):
         i=0
-        while i<10:
-            time.sleep(1)
+        while i<20000:
+            time.sleep(0.001)
             self.esd1t.set(str(i))
             i=i+1
+        self.esd1t.set(str(0))
     def countDS2(self):
         i=0
-        while i<10:
-            time.sleep(1)
+        while i<20000:
+            time.sleep(0.001)
             self.esd2t.set(str(i))
             i=i+1
+        self.esd1t.set(str(0))
     def countDS3(self):
         i=0
-        while i<10:
-            time.sleep(1)
+        while i<20000:
+            time.sleep(0.001)
             self.esd3t.set(str(i))
             i=i+1
+        self.esd1t.set(str(0))
     
 
       
