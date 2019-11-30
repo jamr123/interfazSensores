@@ -13,6 +13,7 @@ class Interfaz:
         V.title('Sensores')
         self.entradas(V)
         self.labels(V)
+        self.botones(V)
         V.mainloop()
 
     def entradas(self,V):
