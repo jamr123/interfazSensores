@@ -44,31 +44,37 @@ class Interfaz:
         while i<10:
             time.sleep(2)
             print(i)
+            i=i+1
     def countCS2(self):
         i=0
         while i<10:
             time.sleep(2)
             print(i)
+            i=i+1
     def countCS3(self):
         i=0
         while i<10:
             time.sleep(2)
             print(i)
+            i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(2)
             print(i)
+            i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(2)
             print(i)
+            i=i+1
     def countDS3(self):
         i=0
         while i<10:
             time.sleep(2)
             print(i)
+            i=i+1
     
 
       
