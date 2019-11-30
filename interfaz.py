@@ -65,22 +65,22 @@ class Interfaz:
         label.grid(row=2, column=0, sticky="w", padx=5, pady=5)
     
     def botones(self,V):
-        b1=Button(V, text="Conectar S1")
+        b1=Button(V, text="CS1")
         b1.grid(row=0, column=2, padx=5, pady=5)
 
-        b2=Button(V, text="Conectar S2")
+        b2=Button(V, text="CS2")
         b2.grid(row=1, column=2, padx=5, pady=5)
 
-        b3=Button(V, text="Conectar S3")
+        b3=Button(V, text="CS3")
         b3.grid(row=2, column=2, padx=5, pady=5)
 
-        b1=Button(V, text="Desconectar S1")
+        b1=Button(V, text="DS1")
         b1.grid(row=0, column=4, padx=5, pady=5)
 
-        b2=Button(V, text="Desconectar S2")
+        b2=Button(V, text="DS2")
         b2.grid(row=1, column=4, padx=5, pady=5)
 
-        b3=Button(V, text="Desconectar S3")
+        b3=Button(V, text="DS3")
         b3.grid(row=2, column=4, padx=5, pady=5)
 
     
