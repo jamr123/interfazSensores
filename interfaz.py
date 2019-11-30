@@ -73,25 +73,25 @@ class Interfaz:
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esc3t.set(str(i))
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esd1t.set(str(i))
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esd2t.set(str(i))
             i=i+1
     def countDS3(self):
         i=0
         while i<10:
             time.sleep(1)
-            print(i)
+            self.esd3t.set(str(i))
             i=i+1
     
 
@@ -111,15 +111,15 @@ class Interfaz:
         self.esc2t.set(str(i))
         self.esc3t.set(str(i))
 
-        eS1 = Entry(V, width=10)
+        eS1 = Entry(V, width=10,textvariable=self.es1t)
         eS1 .grid(row=0, column=1, padx=5, pady=5)
         eS1 .config(justify="right", state='readonly')
          
-        eS2 = Entry(V, width=10)
+        eS2 = Entry(V, width=10,textvariable=self.es2t)
         eS2 .grid(row=1, column=1, padx=5, pady=5)
         eS2 .config(justify="right", state='readonly')
          
-        eS3 = Entry(V, width=10)
+        eS3 = Entry(V, width=10,textvariable=self.es3t)
         eS3 .grid(row=2, column=1, padx=5, pady=5)
         eS3 .config(justify="right", state='readonly')
 
@@ -127,23 +127,23 @@ class Interfaz:
         eSC1 .grid(row=0, column=3, padx=5, pady=5)
         eSC1 .config(justify="right", state='readonly')
          
-        eSC2 = Entry(V, width=8)
+        eSC2 = Entry(V, width=8,textvariable=self.esc2t)
         eSC2 .grid(row=1, column=3, padx=5, pady=5)
         eSC2 .config(justify="right", state='readonly')
          
-        eSC3 = Entry(V, width=8)
+        eSC3 = Entry(V, width=8,textvariable=self.esc3t)
         eSC3 .grid(row=2, column=3, padx=5, pady=5)
         eSC3 .config(justify="right", state='readonly')
 
-        eSD1 = Entry(V, width=8)
+        eSD1 = Entry(V, width=8,textvariable=self.esd1t)
         eSD1 .grid(row=0, column=5, padx=5, pady=5)
         eSD1 .config(justify="right", state='readonly')
          
-        eSD2 = Entry(V, width=8)
+        eSD2 = Entry(V, width=8,textvariable=self.esd2t)
         eSD2 .grid(row=1, column=5, padx=5, pady=5)
         eSD2 .config(justify="right", state='readonly')
          
-        eSD3 = Entry(V, width=8)
+        eSD3 = Entry(V, width=8,textvariable=self.esd3t)
         eSD3 .grid(row=2, column=5, padx=5, pady=5)
         eSD3 .config(justify="right", state='readonly')
 
