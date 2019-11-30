@@ -1,16 +1,16 @@
 from Tkinter import *
-import Tkinter as tk
 import threading
 import time 
 
 class Interfaz:
-    esc1t = StringVar()
+    esc1t = None
 
     def __init__(self):
         V = Tk()
         V.geometry('500x300')
         V.configure(bg = 'beige')
         V.title('Sensores')
+        self.esc1t = StringVar()
         self.entradas(V)
         self.labels(V)
         self.botones(V)
@@ -44,7 +44,7 @@ class Interfaz:
         i=0
         while i<10:
             time.sleep(1)
-            esc1t.set(str(i))
+            self.esc1t.set(str(i))
             i=i+1
     def countCS2(self):
         i=0
