@@ -7,13 +7,13 @@ class Sensores:
     S1=None
     S2=None
     S3=None
-    rootSensores=None
+    
 
     def __init__(self):
         os.system('modprobe w1-gpio')
         os.system('modprobe w1-therm')
         
-        self.rootSensores = '/sys/bus/w1/devices/'
+         
 
         
         
@@ -38,17 +38,17 @@ class Sensores:
     def readT(slef,n):
         t=0
         if n==1:
-            if glob.glob(self.rootSensores + '28*')[0]:
+            if glob.glob('/sys/bus/w1/devices/28*')[0]:
                 carpetaS1 = glob.glob(self.rootSensores + '28*')[0]
                 self.S1 = carpetaS1 + '/w1_slave'
                 t=read_temp(S1)
         elif n==2:
-            if glob.glob(self.rootSensores + '28*')[1]:
+            if glob.glob('/sys/bus/w1/devices/28*')[1]:
                 carpetaS2 = glob.glob(self.rootSensores + '28*')[1]
                 self.S2 = carpetaS2 + '/w1_slave'
                 t=read_temp(S2)
         elif n==3:
-            if glob.glob(self.rootSensores + '28*')[2]:
+            if glob.glob('/sys/bus/w1/devices/28*')[2]:
                 carpetaS3 = glob.glob(self.rootSensores + '28*')[2]
                 self.S3 = carpetaS3 + '/w1_slave'
                 t=read_temp(S3)
