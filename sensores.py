@@ -24,9 +24,9 @@ class Sensores:
         self.S3 = carpetaS3 + '/w1_slave'
         
     def read_temp_raw(device_file):
-    f = open(device_file, 'r')
-    lines = f.readlines()
-    f.close()
+        f = open(device_file, 'r')
+        lines = f.readlines()
+        f.close()
     return lines
  
     def read_temp(device_file):
