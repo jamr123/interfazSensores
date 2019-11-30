@@ -98,6 +98,7 @@ class Interfaz:
       
 
     def entradas(self,V):
+        i=0
         self.es1t.set(str(i))
         self.es2t.set(str(i))
         self.es3t.set(str(i))
