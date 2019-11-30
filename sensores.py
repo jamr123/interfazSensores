@@ -44,12 +44,12 @@ class Sensores:
                 t=read_temp(S1)
         elif n==2:
             if glob.glob('/sys/bus/w1/devices/28*')[1]:
-                carpetaS2 = glob.glob(self.rootSensores + '28*')[1]
+                carpetaS2 = glob.glob('/sys/bus/w1/devices/28*')[1]
                 self.S2 = carpetaS2 + '/w1_slave'
                 t=read_temp(S2)
         elif n==3:
             if glob.glob('/sys/bus/w1/devices/28*')[2]:
-                carpetaS3 = glob.glob(self.rootSensores + '28*')[2]
+                carpetaS3 = glob.glob('/sys/bus/w1/devices/28*')[2]
                 self.S3 = carpetaS3 + '/w1_slave'
                 t=read_temp(S3)
         return t
