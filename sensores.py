@@ -5,13 +5,19 @@ import time
 
 class Sensores:
     
-    
+    SN1=None
+    SN2=None
+    SN3=None
 
     def __init__(self):
         os.system('modprobe w1-gpio')
         os.system('modprobe w1-therm')
-        
-         
+        if glob.glob('/sys/bus/w1/devices/28*')[1]:
+           self.SN1=glob.glob('/sys/bus/w1/devices/28*')[1]
+        if glob.glob('/sys/bus/w1/devices/28*')[2]
+           self.SN2=glob.glob('/sys/bus/w1/devices/28*')[2]
+        if glob.glob('/sys/bus/w1/devices/28*')[1]
+           self.SN3=glob.glob('/sys/bus/w1/devices/28*')[3] 
 
         
         
@@ -36,23 +42,15 @@ class Sensores:
 
     def readT(self,n):
         t=0
-        print(glob.glob('/sys/bus/w1/devices/*'))
+        
 
         if n==1:
-            if glob.glob('/sys/bus/w1/devices/28*')[0]:
-                carpetaS1 = glob.glob('/sys/bus/w1/devices/28*')[0]
-                S1 = carpetaS1 + '/w1_slave'
-                t=self.read_temp(S1)
+            S1 = self.SN1 + '/w1_slave'
+            t=self.read_temp(S1)
         elif n==2:
-            if glob.glob('/sys/bus/w1/devices/28*')[1]:
-                carpetaS2 = glob.glob('/sys/bus/w1/devices/28*')[1]
-                S2 = carpetaS2 + '/w1_slave'
-                t=self.read_temp(S2)
+           
         elif n==3:
-            if glob.glob('/sys/bus/w1/devices/28*')[2]:
-                carpetaS3 = glob.glob('/sys/bus/w1/devices/28*')[2]
-                S3 = carpetaS3 + '/w1_slave'
-                t=self.read_temp(S3)
+            
         return t
 
         
