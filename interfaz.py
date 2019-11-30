@@ -5,7 +5,7 @@ class Interfaz:
 
     def __init__(self):
         V = Tk()
-        V.geometry('400x400')
+        V.geometry('500x300')
         V.configure(bg = 'beige')
         V.title('Sensores')
         self.entradas(V)
