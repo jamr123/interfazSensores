@@ -54,7 +54,7 @@ class Sensores:
     def readT(self,n):
         t=None
         
-        if path.exists(file):
+        if path.exists(self.SN1):
             if n==1:
                 S1 = self.SN1 + '/w1_slave'
                 t=self.read_temp(S1)
