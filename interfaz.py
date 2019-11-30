@@ -1,4 +1,6 @@
-from Tkinter import * 
+from Tkinter import *
+import threading
+import time 
 
 class Interfaz:
    
@@ -14,17 +16,62 @@ class Interfaz:
         V.mainloop()
 
     def CS1(self):
-        print("CS1")
+        cs1 = threading.Thread(target=self.countCS1, args=(0))
+        cs1.start()
+
     def CS2(self):
-        print("CS2")
+        cs2 = threading.Thread(target=self.countCS2, args=(0))
+        cs2.start()
+
     def CS3(self):
-        print("CS3") 
+        cs3 = threading.Thread(target=self.countCS3, args=(0))
+        cs3.start()
+
     def DS1(self):
-        print("DS1")
+        ds1 = threading.Thread(target=self.countDS1, args=(0))
+        ds1.start()
+
     def DS2(self):
-        print("DS2")
+        ds2 = threading.Thread(target=self.countDS2, args=(0))
+        ds2.start()
+
     def DS3(self):
-        print("DS3")   
+        ds3 = threading.Thread(target=self.countDS3, args=(0))
+        ds3.start()
+
+    def countCS1(self):
+        i=0
+        while i<10:
+            time.sleep(2)
+            print(i)
+    def countCS2(self):
+        i=0
+        while i<10:
+            time.sleep(2)
+            print(i)
+    def countCS3(self):
+        i=0
+        while i<10:
+            time.sleep(2)
+            print(i)
+    def countDS1(self):
+        i=0
+        while i<10:
+            time.sleep(2)
+            print(i)
+    def countDS1(self):
+        i=0
+        while i<10:
+            time.sleep(2)
+            print(i)
+    def countDS3(self):
+        i=0
+        while i<10:
+            time.sleep(2)
+            print(i)
+    
+
+      
 
     def entradas(self,V):
 
