@@ -68,35 +68,47 @@ class Interfaz:
             time.sleep(1)
             self.esc2t.set(str(i))
             i=i+1
+        
     def countCS3(self):
         i=0
         while i<10:
             time.sleep(1)
-            self.esc3t.set(str(i))
+            print(i)
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(1)
-            self.esd1t.set(str(i))
+            print(i)
             i=i+1
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(1)
-            self.esd2t.set(str(i))
+            print(i)
             i=i+1
     def countDS3(self):
         i=0
         while i<10:
             time.sleep(1)
-            self.esd3t.set(str(i))
+            print(i)
             i=i+1
     
 
       
 
     def entradas(self,V):
+        self.es1t.set(str(i))
+        self.es2t.set(str(i))
+        self.es3t.set(str(i))
+
+        self.esc1t.set(str(i))
+        self.esc2t.set(str(i))
+        self.esc3t.set(str(i))
+
+        self.esc1t.set(str(i))
+        self.esc2t.set(str(i))
+        self.esc3t.set(str(i))
 
         eS1 = Entry(V, width=10)
         eS1 .grid(row=0, column=1, padx=5, pady=5)
