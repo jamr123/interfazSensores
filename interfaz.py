@@ -11,8 +11,8 @@ class Interfaz:
         V.geometry('400x300')
         V.configure(bg = 'beige')
         V.title('Sensores')
-        entradas(V)
-        labels(V)
+        self.entradas(V)
+        self.labels(V)
         
 
         V.mainloop()
