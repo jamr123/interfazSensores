@@ -68,20 +68,20 @@ class Interfaz:
             time.sleep(1)
             self.esc2t.set(str(i))
             i=i+1
-        
     def countCS3(self):
         i=0
         while i<10:
             time.sleep(1)
             self.esc3t.set(str(i))
             i=i+1
+
     def countDS1(self):
         i=0
         while i<10:
             time.sleep(1)
             self.esd1t.set(str(i))
             i=i+1
-    def countDS1(self):
+    def countDS2(self):
         i=0
         while i<10:
             time.sleep(1)
@@ -107,9 +107,9 @@ class Interfaz:
         self.esc2t.set(str(i))
         self.esc3t.set(str(i))
 
-        self.esc1t.set(str(i))
-        self.esc2t.set(str(i))
-        self.esc3t.set(str(i))
+        self.esd1t.set(str(i))
+        self.esd2t.set(str(i))
+        self.esd3t.set(str(i))
 
         eS1 = Entry(V, width=10,textvariable=self.es1t)
         eS1 .grid(row=0, column=1, padx=5, pady=5)
