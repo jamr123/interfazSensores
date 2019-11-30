@@ -11,6 +11,13 @@ class Interfaz:
         V.geometry('400x300')
         V.configure(bg = 'beige')
         V.title('Sensores')
+        entradas(V)
+        labels(V)
+        
+
+        V.mainloop()
+
+    def entradas(self,V):
 
         eS1 = Entry(V)
         eS1 .grid(row=0, column=1, padx=5, pady=5)
@@ -23,10 +30,14 @@ class Interfaz:
         eS3 = Entry(V)
         eS3 .grid(row=3, column=1, padx=5, pady=5)
         eS3 .config(justify="right", state='readonly')
-
-
-        V.mainloop()
-
         
         
+    def labels(self,V):
+        label = Label(root, text="S1")
+        label.grid(row=0, column=1, sticky="w", padx=5, pady=5)
 
+        label = Label(root, text="S2")
+        label.grid(row=0, column=2, sticky="w", padx=5, pady=5)
+
+        label = Label(root, text="S3")
+        label.grid(row=0, column=3, sticky="w", padx=5, pady=5)
