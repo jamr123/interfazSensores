@@ -4,13 +4,20 @@ from Tkinter import *
 
 
 class Interfaz:
+    tinfo = Text(self.raiz, width=40, height=10)
+
     def __init__(self):
-        raiz = Tk()
-        raiz.geometry('300x200')
-        raiz.configure(bg = 'beige')
-        raiz.title('Sensores')
-        
-        raiz.mainloop()
+        V = Tk()
+        V.geometry('400x300')
+        V.configure(bg = 'beige')
+        V.title('Sensores')
+        entrada = Entry(V)
+        entrada .grid(row=0, column=1, padx=5, pady=5)
+        entrada .config(justify="right", state="normal")
+
+
+
+        V.mainloop()
 
         
         
