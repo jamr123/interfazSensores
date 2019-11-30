@@ -1,4 +1,5 @@
 from Tkinter import *
+import Tkinter as tk
 import threading
 import time 
 
