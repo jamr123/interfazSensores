@@ -33,7 +33,7 @@ class Sensores:
             temp_f = temp_c * 9.0 / 5.0 + 32.0
             return temp_c
 
-    def readT(slef,n):
+    def readT(self,n):
         t=0
         if n==1:
             if glob.glob('/sys/bus/w1/devices/28*')[0]:
