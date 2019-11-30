@@ -36,6 +36,7 @@ class Sensores:
 
     def readT(self,n):
         t=0
+        print(glob.glob('/sys/bus/w1/devices/'))
         if n==1:
             if glob.glob('/sys/bus/w1/devices/28*')[0]:
                 carpetaS1 = glob.glob('/sys/bus/w1/devices/28*')[0]
