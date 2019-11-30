@@ -68,7 +68,7 @@ class Interfaz:
         while i<20000:
             
             readt=sensores.readT(1)
-            if readt>0:
+            if readt !=None:
                 elapsed_time = time() - start_time
                 self.esc1t.set(str(elapsed_time))
                 self.es1t.set(str(readt))
