@@ -65,10 +65,9 @@ class Interfaz:
             time.sleep(0.001)
             self.esc1t.set(str(i))
             i=i+1
-            if sensores.readT(1) != -520:
-                self.es1t.set(str(sensores.readT(1)))
-                i=20000
-        self.esc1t.set(str(0))
+            self.es1t.set(str(sensores.readT(1)))
+            
+        
         
     def countCS2(self):
         i=0
