@@ -45,9 +45,9 @@ class Sensores:
         t=0
         if n==1:
             t=read_temp(S1)
-        if n==2:
+        elif n==2:
             t=read_temp(S2)
-        if n==3:
+        elif n==3:
             t=read_temp(S3)
         return t
 
