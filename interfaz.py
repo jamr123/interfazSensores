@@ -4,7 +4,7 @@ import threading
 import time 
 
 class Interfaz:
-    esc1t = tk.StringVar()
+    esc1t = StringVar()
 
     def __init__(self):
         V = Tk()
