@@ -1,6 +1,9 @@
-        
-import tkinter   
-from tkinter import ttk 
+try:
+    from Tkinter import * 
+    from Tkinter import ttk  
+except ImportError:
+    from tkinter import *
+    from tkinter import ttk 
 
 
 class Interfaz:
