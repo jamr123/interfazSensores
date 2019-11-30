@@ -1,6 +1,7 @@
 import os
 import glob
 import time
+import os.path as path
 
 
 class Sensores:
@@ -51,13 +52,14 @@ class Sensores:
         return 0
 
     def readT(self,n):
-        t=0
+        t=None
         
-
-        if n==1:
-            S1 = self.SN1 + '/w1_slave'
-            t=self.read_temp(S1)
-        
+        if path.exists(file):
+            if n==1:
+                S1 = self.SN1 + '/w1_slave'
+                t=self.read_temp(S1)
+        else:
+            t=None
             
         return t
 
