@@ -1,5 +1,5 @@
 from Tkinter import * 
-from Tkinter import ttk  
+
  
 
 
@@ -9,7 +9,7 @@ class Interfaz:
         raiz.geometry('300x200')
         raiz.configure(bg = 'beige')
         raiz.title('Sensores')
-        ttk.Button(raiz, text='Salir', command=quit).pack(side=BOTTOM)
+        
         raiz.mainloop()
 
         
