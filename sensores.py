@@ -40,18 +40,14 @@ class Sensores:
  
     def read_temp(self,device_file):
         lines = self.read_temp_raw(device_file)
-        while lines[0].strip()[-3:] != 'YES':
-            time.sleep(0.2)
-            lines = self.read_temp_raw(device_file)
-            if lines[0].strip()[-2:] == 'NO':
-                break
-        equals_pos = lines[1].find('t=')
-        if equals_pos != -1:
-            temp_string = lines[1][equals_pos+2:]
-            temp_c = float(temp_string) / 1000.0
-            temp_f = temp_c * 9.0 / 5.0 + 32.0
-            return temp_c
-        return 0
+        if lines[0].strip()[-3:] == 'YES':    
+            equals_pos = lines[1].find('t=')
+            if equals_pos != -1:
+                temp_string = lines[1][equals_pos+2:]
+                temp_c = float(temp_string) / 1000.0
+                temp_f = temp_c * 9.0 / 5.0 + 32.0
+                return temp_c
+        return None
 
     def readT(self,n):
         t=None
@@ -60,8 +56,6 @@ class Sensores:
             if n==1:
                 S1 = self.SN1 + '/w1_slave'
                 t=self.read_temp(S1)
-        else:
-            t=None
             
         return t
 
