@@ -16,13 +16,13 @@ class Sensores:
 
         
         
-    def read_temp_raw(device_file):
+    def read_temp_raw(self,device_file):
         f = open(device_file, 'r')
         lines = f.readlines()
         f.close()
         return lines
  
-    def read_temp(device_file):
+    def read_temp(self,device_file):
         lines = read_temp_raw(device_file)
         while lines[0].strip()[-3:] != 'YES':
             time.sleep(0.2)
@@ -34,7 +34,7 @@ class Sensores:
             temp_f = temp_c * 9.0 / 5.0 + 32.0
             return temp_c
 
-    def readT(n):
+    def readT(slef,n):
         t=0
         if n==1:
             if glob.glob(rootSensores + '28*')[0]:
