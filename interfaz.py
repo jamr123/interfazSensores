@@ -1,5 +1,5 @@
         
-from tkinter import *   
+from tkinter   
 from tkinter import ttk 
 
 
