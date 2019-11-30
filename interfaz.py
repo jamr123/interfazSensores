@@ -4,7 +4,7 @@ from Tkinter import *
 
 
 class Interfaz:
-    tinfo = Text(self.raiz, width=40, height=10)
+   
 
     def __init__(self):
         V = Tk()
