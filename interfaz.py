@@ -16,27 +16,27 @@ class Interfaz:
         V.mainloop()
 
     def CS1(self):
-        cs1 = threading.Thread(target=self.countCS1, args=(0))
+        cs1 = threading.Thread(target=self.countCS1)
         cs1.start()
 
     def CS2(self):
-        cs2 = threading.Thread(target=self.countCS2, args=(0))
+        cs2 = threading.Thread(target=self.countCS2)
         cs2.start()
 
     def CS3(self):
-        cs3 = threading.Thread(target=self.countCS3, args=(0))
+        cs3 = threading.Thread(target=self.countCS3)
         cs3.start()
 
     def DS1(self):
-        ds1 = threading.Thread(target=self.countDS1, args=(0))
+        ds1 = threading.Thread(target=self.countDS1)
         ds1.start()
 
     def DS2(self):
-        ds2 = threading.Thread(target=self.countDS2, args=(0))
+        ds2 = threading.Thread(target=self.countDS2)
         ds2.start()
 
     def DS3(self):
-        ds3 = threading.Thread(target=self.countDS3, args=(0))
+        ds3 = threading.Thread(target=self.countDS3)
         ds3.start()
 
     def countCS1(self):
