@@ -66,7 +66,6 @@ class Interfaz:
         self.es1t.set(str(0))
         start_time = time()
         while i<20000:
-            
             readt=sensores.readT(1)
             if readt !=None:
                 elapsed_time = time() - start_time
@@ -91,12 +90,13 @@ class Interfaz:
 
     def countDS1(self):
         i=0
+        self.esd1t.set(str(0))
         start_time = time()
         while i<20000:
             readt=sensores.readT(1)
-            if readt==0:
+            if readt ==None:
                 elapsed_time = time() - start_time
-                self.esc1t.set(str(elapsed_time))
+                self.esd1t.set(str(elapsed_time))
                 self.es1t.set(str(readt))
                 i=20000
 
