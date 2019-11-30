@@ -15,39 +15,39 @@ class Interfaz:
 
     def entradas(self,V):
 
-        eS1 = Entry(V)
+        eS1 = Entry(V, width=40)
         eS1 .grid(row=0, column=1, padx=5, pady=5)
         eS1 .config(justify="right", state='readonly')
          
-        eS2 = Entry(V)
+        eS2 = Entry(V, width=40)
         eS2 .grid(row=1, column=1, padx=5, pady=5)
         eS2 .config(justify="right", state='readonly')
          
-        eS3 = Entry(V)
+        eS3 = Entry(V, width=40)
         eS3 .grid(row=2, column=1, padx=5, pady=5)
         eS3 .config(justify="right", state='readonly')
 
-        eSC1 = Entry(V)
+        eSC1 = Entry(V, width=40)
         eSC1 .grid(row=0, column=3, padx=5, pady=5)
         eSC1 .config(justify="right", state='readonly')
          
-        eSC2 = Entry(V)
+        eSC2 = Entry(V, width=40)
         eSC2 .grid(row=1, column=3, padx=5, pady=5)
         eSC2 .config(justify="right", state='readonly')
          
-        eSC3 = Entry(V)
+        eSC3 = Entry(V, width=40)
         eSC3 .grid(row=2, column=3, padx=5, pady=5)
         eSC3 .config(justify="right", state='readonly')
 
-        eSD1 = Entry(V)
+        eSD1 = Entry(V, width=40)
         eSD1 .grid(row=0, column=5, padx=5, pady=5)
         eSD1 .config(justify="right", state='readonly')
          
-        eSD2 = Entry(V)
+        eSD2 = Entry(V, width=40)
         eSD2 .grid(row=1, column=5, padx=5, pady=5)
         eSD2 .config(justify="right", state='readonly')
          
-        eSD3 = Entry(V)
+        eSD3 = Entry(V, width=40)
         eSD3 .grid(row=2, column=5, padx=5, pady=5)
         eSD3 .config(justify="right", state='readonly')
 
