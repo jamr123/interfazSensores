@@ -1,6 +1,9 @@
 from Tkinter import *
 import threading
 import time 
+import sensores
+
+sensores=sensores.Sensores()
 
 class Interfaz:
     esc1t = None
@@ -62,7 +65,11 @@ class Interfaz:
             time.sleep(0.001)
             self.esc1t.set(str(i))
             i=i+1
+            if sensores.readT(1) > 0:
+                self.es1t.set(str(sensores.readT(1)))
+                i=20000
         self.esc1t.set(str(0))
+        
     def countCS2(self):
         i=0
         while i<20000:
@@ -91,17 +98,15 @@ class Interfaz:
             time.sleep(0.001)
             self.esd2t.set(str(i))
             i=i+1
-        self.esd1t.set(str(0))
+        self.esd2t.set(str(0))
     def countDS3(self):
         i=0
         while i<20000:
             time.sleep(0.001)
             self.esd3t.set(str(i))
             i=i+1
-        self.esd1t.set(str(0))
+        self.esd3t.set(str(0))
     
-
-      
 
     def entradas(self,V):
         i=0
