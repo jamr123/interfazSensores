@@ -75,18 +75,29 @@ class Interfaz:
                 
     def countCS2(self):
         i=0
-        while i<20000:
-            time.sleep(0.001)
-            self.esc2t.set(str(i))
-            i=i+1
         self.esc2t.set(str(0))
+        self.es2t.set(str(0))
+        start_time = time()
+        while i<20000:
+            readt=sensores.readT(2)
+            if readt !=None:
+                elapsed_time = time() - start_time
+                self.esc2t.set(str(elapsed_time))
+                self.es2t.set(str(readt))
+                i=20000
+
     def countCS3(self):
         i=0
-        while i<20000:
-            time.sleep(0.001)
-            self.esc3t.set(str(i))
-            i=i+1
         self.esc3t.set(str(0))
+        self.es3t.set(str(0))
+        start_time = time()
+        while i<20000:
+            readt=sensores.readT(3)
+            if readt !=None:
+                elapsed_time = time() - start_time
+                self.esc3t.set(str(elapsed_time))
+                self.es3t.set(str(readt))
+                i=20000
 
     def countDS1(self):
         i=0
@@ -103,18 +114,28 @@ class Interfaz:
 
     def countDS2(self):
         i=0
-        while i<20000:
-            time.sleep(0.001)
-            self.esd2t.set(str(i))
-            i=i+1
         self.esd2t.set(str(0))
+        start_time = time()
+        while i<20000:
+            readt=sensores.readT(2)
+            print(readt)
+            if readt ==None:
+                elapsed_time = time() - start_time
+                self.esd2t.set(str(elapsed_time))
+                self.es2t.set(str(readt))
+                i=20000
     def countDS3(self):
         i=0
-        while i<20000:
-            time.sleep(0.001)
-            self.esd3t.set(str(i))
-            i=i+1
         self.esd3t.set(str(0))
+        start_time = time()
+        while i<20000:
+            readt=sensores.readT(3)
+            print(readt)
+            if readt ==None:
+                elapsed_time = time() - start_time
+                self.esd3t.set(str(elapsed_time))
+                self.es3t.set(str(readt))
+                i=20000
     
 
     def entradas(self,V):
