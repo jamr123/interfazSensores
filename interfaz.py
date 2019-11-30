@@ -1,6 +1,7 @@
 from Tkinter import *
 import threading
 import time 
+from time import time
 import sensores
 
 sensores=sensores.Sensores()
