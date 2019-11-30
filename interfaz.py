@@ -88,11 +88,15 @@ class Interfaz:
 
     def countDS1(self):
         i=0
+        start_time = time()
         while i<20000:
-            time.sleep(0.001)
-            self.esd1t.set(str(i))
-            i=i+1
-        self.esd1t.set(str(0))
+            readt=sensores.readT(1)
+            if readt==0:
+                elapsed_time = time() - start_time
+                self.esc1t.set(str(elapsed_time))
+                self.es1t.set(str(readt))
+                i=20000
+                
     def countDS2(self):
         i=0
         while i<20000:
