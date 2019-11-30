@@ -11,10 +11,18 @@ class Interfaz:
         V.geometry('400x300')
         V.configure(bg = 'beige')
         V.title('Sensores')
-        entrada = Entry(V)
-        entrada .grid(row=0, column=1, padx=5, pady=5)
-        entrada .config(justify="right", state="normal")
 
+        eS1 = Entry(V)
+        eS1 .grid(row=0, column=1, padx=5, pady=5)
+        eS1 .config(justify="right", state='readonly')
+         
+        eS2 = Entry(V)
+        eS2 .grid(row=2, column=1, padx=5, pady=5)
+        eS2 .config(justify="right", state='readonly')
+         
+        eS3 = Entry(V)
+        eS3 .grid(row=3, column=1, padx=5, pady=5)
+        eS3 .config(justify="right", state='readonly')
 
 
         V.mainloop()
