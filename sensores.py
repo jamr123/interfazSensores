@@ -49,7 +49,7 @@ class Sensores:
             t=read_temp(S2)
         if n==3:
             t=read_temp(S3)
-        retrun t
+        return t
 
 
 
