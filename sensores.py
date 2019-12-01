@@ -1,7 +1,7 @@
 import os
 import glob
 import time
-import os.path as path
+
 
 
 class Sensores:
